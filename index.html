@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<title>Registrazione Newsletter</title>
+<script>
+    //almeno 6 caratteri
+    //deve contenere sia la chiocciola che il punto
+
+    function myFunction() {
+            email=form.inputEmail.value;
+            emailLength=email.length;
+            
+            if (emailLength<6) {
+                alert("Email troppo corta, deve contere almeno 6 caratteri");
+                return;
+            }
+            
+            chiocciola=email.indexOf("@");
+            punto=email.indexOf(".");
+            
+            if (chiocciola==-1 || punto==-1) {
+                alert("Non c'è la chiocciola o il punto");
+                return;
+            }
+            else {
+                alert("Iscrizione alla newsletter effettuata");
+            } 
+
+    }
+</script>
+<body>
+    <form name="form">
+       Email: <input type="text" id="inputEmail">
+              <input type="submit" id="submit" value="Iscriviti" onclick="myFunction()"> 
+    </form>
+</body>
+</html> 
